@@ -3,6 +3,7 @@
     const appdispatcher = createEventDispatcher();
     
     function playCatSound() {
+        // event.preventDefault();
         appdispatcher('catpurr', 'cat-purring');
     }
 </script>

@@ -9,7 +9,8 @@ function secondsLeft() {
 }
 
 function catPurring(e) {
-	console.log(e);
+	// console.log(e);
+	appaudio.play();
 }
 </script>
 
