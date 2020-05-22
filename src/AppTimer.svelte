@@ -47,7 +47,7 @@
     }
 </style>
 
-<h3>{secondsLeft} left to pet a Cat! :D</h3>
+<h3>{secondsLeft} seconds left to pet a Cat! :D</h3>
 <div>
     <AppProgressBar {progress} />
 

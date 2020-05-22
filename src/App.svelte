@@ -20,7 +20,7 @@ function secondsLeft() {
 	}
 	.iconapp {
 		display: inline-block;
-		max-width: 42px;
+		max-width: 52px;
 		vertical-align: middle;
 	}
 </style>
