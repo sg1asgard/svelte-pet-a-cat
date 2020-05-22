@@ -1,9 +1,10 @@
 <script>
     // your script goes here
     import AppProgressBar from './AppProgressBar.svelte';
-    const totalSeconds = 5;
+    const totalSeconds = 20;
     let secondsLeft = totalSeconds;
     let isRunning = false;
+    $: progress = ((totalSeconds - secondsLeft) / totalSeconds) * 100;
 
     // Start Timer to pet a Cat.
     function startTimer() {
@@ -23,7 +24,6 @@
             }
         }, 1000);
     }
-
 
 </script>
 
@@ -49,7 +49,7 @@
 
 <h3>{secondsLeft} left to pet a Tuxedo Cat! :D</h3>
 <div>
-    <AppProgressBar />
+    <AppProgressBar {progress} />
 
     <button disabled={isRunning} on:click="{startTimer}">Start petting</button>
 </div>
