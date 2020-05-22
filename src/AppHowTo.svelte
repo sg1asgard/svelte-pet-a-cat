@@ -1,3 +1,11 @@
+<script>
+    import { createEventDispatcher } from 'svelte';
+    const appdispatcher = createEventDispatcher();
+    
+    function playCatSound() {
+        appdispatcher('catpurr', 'cat-purring');
+    }
+</script>
 <style>
     /* your styles go here */
     .pets-container {
@@ -13,7 +21,7 @@
 <div class="pets-container">
     <div bp="grid 4">
         <div>
-            <img src="cat-images/cat-to-pet-01.jpg" alt="Pet a Cat" />
+            <img on:click="{playCatSound}" src="cat-images/cat-to-pet-01.jpg" alt="Pet a Cat" />
         </div>
         <div>
             <img src="cat-images/cat-to-pet-02.jpg" alt="Pet a Cat" />

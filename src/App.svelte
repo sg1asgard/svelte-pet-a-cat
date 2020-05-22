@@ -2,10 +2,15 @@
 import AppHowTo from './AppHowTo.svelte';
 import AppTimer from './AppTimer.svelte';
 
+let appaudio;
+
 function secondsLeft() {
 	console.log('console log Svelte works');
 }
 
+function catPurring(e) {
+	console.log(e);
+}
 </script>
 
 <style>
@@ -29,5 +34,10 @@ function secondsLeft() {
 
 	<AppTimer />
 
-	<AppHowTo />
+	<AppHowTo on:catpurr="{catPurring}" />
+
+	<audio bind:this="{appaudio}">
+		<source src="cat-sounds/purring-cat.mp3">
+		Your browser does not support the audio tag.
+	</audio>
 </div>
