@@ -38,6 +38,16 @@
         background-color: lightcoral;
         border: 1px solid coral;
         border-radius: 3px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #db6e6e;
+    }
+    button[disabled] {
+        color: #998585;
+        background-color: #e1c5c5;
+        border: 1px solid lightcoral;
+        cursor: no-drop;
     }
 </style>
 
