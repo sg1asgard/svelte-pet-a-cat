@@ -10,12 +10,6 @@
         // Set timer running as true, use it to disable the button while true
         isRunning = true;
 
-        // check if the timer is at 0 seconds
-        if (secondsLeft == 0) {
-            // if yes then reset the timer
-            secondsLeft = totalSeconds;
-        }
-
         // run then timer countdown
         const timer = setInterval(() => {
             secondsLeft -= 1;
@@ -24,6 +18,8 @@
                 clearInterval(timer);
                 // enable the button for click
                 isRunning = false;
+                // if yes then reset the timer
+                secondsLeft = totalSeconds;
             }
         }, 1000);
     }
