@@ -6,6 +6,18 @@
         // event.preventDefault();
         appdispatcher('catpurr', 'cat-purring');
     }
+
+    let cats = [
+        { catUrl: 'cat-to-pet-01' },
+        { catUrl: 'cat-to-pet-02' },
+        { catUrl: 'cat-to-pet-03' },
+        { catUrl: 'cat-to-pet-04' },
+        { catUrl: 'cat-to-pet-05' },
+        { catUrl: 'cat-to-pet-06' },
+        { catUrl: 'cat-to-pet-07' },
+        { catUrl: 'cat-to-pet-08' },
+        { catUrl: 'cat-to-pet-09' },
+    ]
 </script>
 <style>
     /* your styles go here */
@@ -19,34 +31,13 @@
         max-width: 100%;
     }
 </style>
+
 <div class="pets-container">
     <div bp="grid 4">
-        <div>
-            <img on:click="{playCatSound}" src="cat-images/cat-to-pet-01.jpg" alt="Pet a Cat" />
-        </div>
-        <div>
-            <img src="cat-images/cat-to-pet-02.jpg" alt="Pet a Cat" />
-        </div>
-        <div>
-            <img src="cat-images/cat-to-pet-03.jpg" alt="Pet a Cat" />
-        </div>
-        <div>
-            <img src="cat-images/cat-to-pet-04.jpg" alt="Pet a Cat" />
-        </div>
-        <div>
-            <img src="cat-images/cat-to-pet-05.jpg" alt="Pet a Cat" />
-        </div>
-        <div>
-            <img src="cat-images/cat-to-pet-06.jpg" alt="Pet a Cat" />
-        </div>
-        <div>
-            <img src="cat-images/cat-to-pet-07.jpg" alt="Pet a Cat" />
-        </div>
-        <div>
-            <img src="cat-images/cat-to-pet-08.jpg" alt="Pet a Cat" />
-        </div>
-        <div>
-            <img src="cat-images/cat-to-pet-09.jpg" alt="Pet a Cat" />
-        </div>
+        {#each cats as cat, i}
+            <div>
+                <img on:click="{playCatSound}" src="cat-images/{cat.catUrl}.jpg" alt="Pet a Cat" />
+            </div>
+        {/each}
     </div>
 </div>
